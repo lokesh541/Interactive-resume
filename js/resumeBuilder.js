@@ -1,7 +1,4 @@
-formatedName = HTMLheaderName.replace("%data%","Lokeswara Reddy");
-$("#header").append(formatedName);
-formatedRole = HTMLheaderRole.replace("%data%","frontend developer")
-$("#header").append(formatedRole);
+
 var bio = {
     "name": "Lokeswara Reddy",
     "role": "frontend developer",
@@ -19,12 +16,13 @@ var bio = {
         "css",
         "Awesomeness"
     ],
-    "bioPic":"images/me.jpg"
+        "bioPic":"images/me.jpg"
+
 };
 
 var work = {
 	"jobs":[
-	{ 
+	{
 		"employer":"upsky",
 		"title":"frontend developer",
 		"location":"bangalore",
@@ -77,6 +75,19 @@ var onlineCourses = {
 	}
 	]
 };
+formatedName = HTMLheaderName.replace("%data%",bio.name);
+$("#header").append(formatedName);
+formatedRole = HTMLheaderRole.replace("%data%",bio.role)
+$("#header").append(formatedRole);
+
+formatedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
+$("#topContacts").append(formatedMobile);
+formatedEmail = HTMLemail.replace("%data%",bio.contacts.email);
+$("#topContacts").append(formatedEmail);
+formatedTwitter = HTMLtwitter.replace("%data%",bio.contacts.twitter);
+$("#topContacts").append(formatedTwitter);
+formatedGithub = HTMLgithub.replace("%data%",bio.contacts.github);
+$("#topContacts").append(formatedGithub);
 
 if(bio.skills.length > 0) {
 	$("#header").append(HTMLskillsStart);
@@ -98,9 +109,9 @@ for(job in work.jobs){
 	var formatEmployer = HTMLworkEmployer.replace("%data%",work.jobs[job].employer);
     var formatedTitle = HTMLworkTitle.replace("%data%",work.jobs[job].title);
 	$(".work-entry:last").append(formatEmployer+formatedTitle);
-	
+
     var formatedDates = HTMLworkDates.replace("%data%",work.jobs[job].dates);
-	
+
 
 	 var formatedLocation = HTMLworkLocation.replace("%data%",work.jobs[job].location);
     		$(".work-entry:last").append(formatedDates + formatedLocation);
