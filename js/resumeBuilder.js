@@ -1,4 +1,3 @@
-
 var bio = {
     "name": "Lokeswara Reddy",
     "role": "frontend developer",
@@ -16,12 +15,11 @@ var bio = {
         "css",
         "Awesomeness"
     ],
-        "bioPic":"images/me.jpg"
-
+    "bioPic":"images/me.jpg"
 };
 
 var work = {
-	"jobs":[
+  "jobs":[
 	{
 		"employer":"upsky",
 		"title":"frontend developer",
@@ -29,8 +27,10 @@ var work = {
 		"dates":2015,
 		"description":"designed and developed elegenat and high perfomance websites"
 
-	}
-	]
+	},
+]
+
+
 };
 var projects = {
 	"project":[
@@ -38,6 +38,7 @@ var projects = {
 		"title":"virtual classroom",
 		"dates":2014,
 		"description":"e-learning application"
+
 	}
 	]
 };
@@ -48,13 +49,16 @@ var education = {
 		"name":"jntp",
 		"major":"computer science",
 		"degree":"BS",
-		"date":2014
+		"date":2014,
+    "location":"Pulivendula, Andhra Pradesh"
 	},
 	{
 		"name":"snist",
 		"major":"computer networks",
 		"degree":"MS",
-		"date":2016
+		"date":2016,
+    "location":"Ghatkesar, Telangana"
+
 	}
 	]
 };
@@ -119,9 +123,11 @@ for(job in work.jobs){
     var formatedDescription = HTMLworkDescription.replace("%data%",work.jobs[job].description);
     	$(".work-entry:last").append(formatedDescription);
 
-   }
   }
+}
   displaywork();
+  $("#mapDiv").append(googleMap);
+
   $(document).click(function(loc) {
   	var x = loc.pageX;
   	var y = loc.pageY;

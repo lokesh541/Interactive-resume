@@ -45,14 +45,17 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <!--
   Uncomment the <script> tag below when you're ready to add an interactive
   Google Map to your resume!
+  <script type="text/javascript"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAenI2uDriY_5BedbAUpezH23xWLJjWVBo&libraries=geometry">
+  </script>
   -->
-<!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> 
 
   <meta name="viewport" content="width=device-width">
 </head>
 <body>
   <div id="main">
-    
+
     <!--
     Everything from here to the <script> tag below is the skeleton of your
     website. Your code will add information to each of the sections of the
@@ -134,7 +137,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     if(document.getElementById('map') === null) {
       document.getElementById('mapDiv').style.backgroundColor = '#000000';
     }
-      
+
   </script>
 </body>
 </html>
