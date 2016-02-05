@@ -18,7 +18,8 @@ var bio = {
         "Javascript",
         "css",
         "Awesomeness"
-    ]
+    ],
+    "bioPic":"images/me.jpg"
 };
 
 var work = {
