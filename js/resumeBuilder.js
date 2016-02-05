@@ -1,6 +1,7 @@
 formatedName = HTMLheaderName.replace("%data%","Lokeswara Reddy");
 $("#header").append(formatedName);
-
+formatedRole = HTMLheaderRole.replace("%data%","frontend developer")
+$("#header").append(formatedRole);
 var bio = {
     "name": "Lokeswara Reddy",
     "role": "frontend developer",
