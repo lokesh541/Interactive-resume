@@ -46,15 +46,15 @@ var projects = {
 var education = {
 	"schools":[
 	{
-		"name":"jntp",
-		"major":"computer science",
-		"degree":"BS",
+		"name":"Jawaharlal Nehru technological university",
+		"major":" Computer Science and Engineering",
+		"degree":"B.tech",
 		"date":2014,
     "location":"Pulivendula, Andhra Pradesh"
 	},
 	{
-		"name":"snist",
-		"major":"computer networks",
+		"name":"Sreenidhi Institute of Science and technology",
+		"major":"Computer Networks and Information Security",
 		"degree":"MS",
 		"date":2016,
     "location":"Ghatkesar, Telangana"
@@ -93,7 +93,9 @@ $("#topContacts").append(formatedTwitter);
 formatedGithub = HTMLgithub.replace("%data%",bio.contacts.github);
 $("#topContacts").append(formatedGithub);
 
-if(bio.skills.length > 0) {
+
+
+if( bio.skills.length > 0 ) {
 	$("#header").append(HTMLskillsStart);
 	var formttedSkill = HTMLskills.replace("%data%",bio.skills[0]);
 	$("#skills").append(formttedSkill);
@@ -104,7 +106,6 @@ if(bio.skills.length > 0) {
 		var formttedSkill =HTMLskills.replace("%data%",bio.skills[3]);
 	$("#skills").append(formttedSkill);
 }
-
 
 function displaywork(){
 
@@ -125,7 +126,27 @@ for(job in work.jobs){
 
   }
 }
-  displaywork();
+displaywork();
+HTMLschoolStart = '<div class="education-entry"></div>';
+var HTMLschoolName = '<a href="#">%data%';
+var HTMLschoolDegree = ' -- %data%</a>';
+var HTMLschoolDates = '<div class="date-text">%data%</div>';
+var HTMLschoolLocation = '<div class="location-text">%data%</div>';
+var HTMLschoolMajor = '<em><br>Major: %data%</em>';
+function displayschool(){
+for(school in education.schools){
+	$("#education").append(HTMLschoolStart);
+	var formatschoolName    = HTMLschoolName.replace("%data%",education.schools[school].name);
+  var formatedschoolDegree = HTMLworkTitle.replace("%data%",education.schools[school].degree);
+	$(".education-entry:last").append(formatschoolName+formatedschoolDegree);
+    var formatedDates = HTMLworkDates.replace("%data%",education.schools[school].date);
+    var formatedLocation = HTMLschoolLocation.replace("%data%",education.schools[school].location);
+    		$(".education-entry:last").append(formatedDates + formatedLocation);
+        var formatedMajor = HTMLschoolMajor.replace("%data%",education.schools[school].major);
+         $(".education-entry:last").append(formatedMajor);
+  }
+}
+displayschool();
   $("#mapDiv").append(googleMap);
 
   $(document).click(function(loc) {
