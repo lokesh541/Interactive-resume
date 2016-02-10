@@ -60,24 +60,25 @@ var education = {
     "location":"Ghatkesar, Telangana"
 
 	}
-	]
+],
+"onlineCourses":
+[
+{
+  "title":"frontend nanodegree",
+  "school":"udacity",
+  "url":"www.udacity.com",
+  "dates":2015
+},
+{
+  "title":"digital marketing",
+  "school":"coursera",
+  "url":"www.coursera.com",
+  "dates":2015
+}
+]
 };
 var onlineCourses = {
-	"onlineCourse":
-	[
-	{
-		"title":"frontend nanodegree",
-		"school":"udacity",
-		"url":"www.udacity.com",
-		"dates":2015
-	},
-	{
-		"title":"digital marketing",
-		"school":"coursera",
-		"url":"www.coursera.com",
-		"dates":2015
-	}
-	]
+
 };
 formatedName = HTMLheaderName.replace("%data%",bio.name);
 $("#header").append(formatedName);
@@ -127,13 +128,8 @@ for(job in work.jobs){
   }
 }
 displaywork();
-HTMLschoolStart = '<div class="education-entry"></div>';
-var HTMLschoolName = '<a href="#">%data%';
-var HTMLschoolDegree = ' -- %data%</a>';
-var HTMLschoolDates = '<div class="date-text">%data%</div>';
-var HTMLschoolLocation = '<div class="location-text">%data%</div>';
-var HTMLschoolMajor = '<em><br>Major: %data%</em>';
-function displayschool(){
+
+function displayschool(){}
 for(school in education.schools){
 	$("#education").append(HTMLschoolStart);
 	var formatschoolName    = HTMLschoolName.replace("%data%",education.schools[school].name);
@@ -144,9 +140,10 @@ for(school in education.schools){
     		$(".education-entry:last").append(formatedDates + formatedLocation);
         var formatedMajor = HTMLschoolMajor.replace("%data%",education.schools[school].major);
          $(".education-entry:last").append(formatedMajor);
-  }
+  }  
 }
 displayschool();
+
   $("#mapDiv").append(googleMap);
 
   $(document).click(function(loc) {
