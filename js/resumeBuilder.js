@@ -15,7 +15,7 @@ var bio = {
         "css",
         "Awesomeness"
     ],
-    "bioPic":"images/me.jpg"
+    "bioPic":"images/fry.jpg"
 };
 
 var work = {
@@ -84,8 +84,12 @@ formatedName = HTMLheaderName.replace("%data%",bio.name);
 $("#header").append(formatedName);
 formatedRole = HTMLheaderRole.replace("%data%",bio.role)
 $("#header").append(formatedRole);
-
+formatedPic = HTMLbioPic.replace("%data%",bio.bioPic);
+$("#header").append(formatedPic);
+formatedWelcome = HTMLwelcomeMsg.replace("%data%",bio.welcomeMessage);
+$("#header").append(formatedWelcome);
 formatedMobile = HTMLmobile.replace("%data%",bio.contacts.mobile);
+
 $("#topContacts").append(formatedMobile);
 formatedEmail = HTMLemail.replace("%data%",bio.contacts.email);
 $("#topContacts").append(formatedEmail);
@@ -129,7 +133,7 @@ for(job in work.jobs){
 }
 displaywork();
 
-function displayschool(){}
+function displayschool(){
 for(school in education.schools){
 	$("#education").append(HTMLschoolStart);
 	var formatschoolName    = HTMLschoolName.replace("%data%",education.schools[school].name);
@@ -140,7 +144,8 @@ for(school in education.schools){
     		$(".education-entry:last").append(formatedDates + formatedLocation);
         var formatedMajor = HTMLschoolMajor.replace("%data%",education.schools[school].major);
          $(".education-entry:last").append(formatedMajor);
-  }  
+  }
+
 }
 displayschool();
 
