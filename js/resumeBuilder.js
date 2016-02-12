@@ -60,24 +60,24 @@ var education = {
     "location":"Ghatkesar, Telangana"
 
 	}
-],
-"onlineCourses":
+]
+};
+var onlineCourses = {
+  "courses":
 [
 {
   "title":"frontend nanodegree",
   "school":"udacity",
   "url":"www.udacity.com",
-  "dates":2015
+  "dates":2016
 },
 {
-  "title":"digital marketing",
+  "title":"machine learning",
   "school":"coursera",
   "url":"www.coursera.com",
   "dates":2015
 }
 ]
-};
-var onlineCourses = {
 
 };
 formatedName = HTMLheaderName.replace("%data%",bio.name);
@@ -132,6 +132,12 @@ for(job in work.jobs){
   }
 }
 displaywork();
+var HTMLonlineClasses = '<h3>Online Classes</h3>';
+var HTMLonlineTitle = '<a href="#">%data%';
+var HTMLonlineSchool = ' - %data%</a>';
+var HTMLonlineDates = '<div class="date-text">%data%</div>';
+var HTMLonlineURL = '<br><a href="#">%data%</a>';
+
 
 function displayschool(){
 for(school in education.schools){
@@ -141,9 +147,18 @@ for(school in education.schools){
 	$(".education-entry:last").append(formatschoolName+formatedschoolDegree);
     var formatedDates = HTMLworkDates.replace("%data%",education.schools[school].date);
     var formatedLocation = HTMLschoolLocation.replace("%data%",education.schools[school].location);
-    		$(".education-entry:last").append(formatedDates + formatedLocation);
+    		  $(".education-entry:last").append(formatedDates + formatedLocation);
         var formatedMajor = HTMLschoolMajor.replace("%data%",education.schools[school].major);
          $(".education-entry:last").append(formatedMajor);
+  }
+  $(".education-entry:last").append(HTMLonlineClasses);
+  for(course in onlineCourses.courses){
+    var formatedTitle = HTMLonlineTitle.replace("%data%",onlineCourses.courses[course].title);
+    var formatedSchool = HTMLonlineSchool.replace("%data%",onlineCourses.courses[course].school);
+  	$(".education-entry:last").append(formatedTitle+formatedSchool);
+    var formatedOnlineDates = HTMLonlineDates.replace("%data%",onlineCourses.courses[course].dates);
+    var formatedOnlineUrl  = HTMLonlineURL.replace("%data%",onlineCourses.courses[course].url);
+  	$(".education-entry:last").append(formatedOnlineDates+formatedOnlineUrl);
   }
 
 }
