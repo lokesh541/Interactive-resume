@@ -37,7 +37,8 @@ var projects = {
 	{
 		"title":"virtual classroom",
 		"dates":2014,
-		"description":"e-learning application"
+		"description":"e-learning application",
+    "imageURL": "images/197x148.gif"
 
 	}
 	]
@@ -156,7 +157,19 @@ for(school in education.schools){
 
 }
 displayschool();
+function displayProject(){
 
+for(project in projects.project){
+  $("#projects").append(HTMLprojectStart);
+  var formatedProjecttitle  = HTMLprojectTitle.replace("%data%",projects.project[project].title);
+  var formatedProjectDate =  HTMLprojectDates.replace("%data%",projects.project[project].dates);
+  $(".project-entry:last").append(formatedProjecttitle + formatedProjectDate);
+  var formatedProjectDesc =  HTMLprojectDescription.replace("%data%",projects.project[project].description);
+  var formatedProjectImage = HTMLprojectImage.replace("%data%",projects.project[project].imageURL);
+  $(".project-entry:last").append(formatedProjectDesc + formatedProjectImage);
+}
+}
+displayProject();
   $("#mapDiv").append(googleMap);
 
   $(document).click(function(loc) {
