@@ -82,28 +82,36 @@ var onlineCourses = {
     }
 };
 
-bio.display = function() {
-    formatedName = HTMLheaderName.replace("%data%", bio.name);
-    $("#header").append(formatedName);
-    formatedRole = HTMLheaderRole.replace("%data%", bio.role)
-    $("#header").append(formatedRole);
-    formatedPic = HTMLbioPic.replace("%data%", bio.bioPic);
-    $("#header").append(formatedPic);
-    formatedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
-    $("#header").append(formatedWelcome);
-    formatedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
 
+bio.display = function() {
+
+
+    var formatedRole = HTMLheaderRole.replace("%data%", bio.role)
+    $("#header").prepend(formatedRole);
+    var formatedName = HTMLheaderName.replace("%data%", bio.name);
+    $("#header").prepend(formatedName);
+
+    var formatedMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
     $("#topContacts").append(formatedMobile);
-    formatedEmail = HTMLemail.replace("%data%", bio.contacts.email);
+    var formatedEmail = HTMLemail.replace("%data%", bio.contacts.email);
     $("#topContacts").append(formatedEmail);
-    formatedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
+    var formatedTwitter = HTMLtwitter.replace("%data%", bio.contacts.twitter);
     $("#topContacts").append(formatedTwitter);
-    formatedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
+    var formatedGithub = HTMLgithub.replace("%data%", bio.contacts.github);
     $("#topContacts").append(formatedGithub);
+    $("#footerContacts").append(formatedMobile);
+    $("#footerContacts").append(formatedEmail);
+    $("#footerContacts").append(formatedTwitter);
+    $("#footerContacts").append(formatedGithub);
+
+    var formatedPic = HTMLbioPic.replace("%data%", bio.bioPic);
+    $("#header").append(formatedPic);
+    var formatedWelcome = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+    $("#header").append(formatedWelcome);
 
     if (bio.skills.length > 0) {
         $("#header").append(HTMLskillsStart);
-        var formttedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+        var formttedSkill = HTMLskills.replace("%data%", bio.skills[0]); 
         $("#skills").append(formttedSkill);
         var formttedSkill = HTMLskills.replace("%data%", bio.skills[1]);
         $("#skills").append(formttedSkill);
@@ -116,6 +124,7 @@ bio.display = function() {
 }
 
 bio.display();
+
 work.display = function() {
     for (job in work.jobs) {
         $("#workExperience").append(HTMLworkStart);
@@ -181,22 +190,3 @@ $(document).click(function(loc) {
     var y = loc.pageY;
     logClicks(x, y);
 });
-$("#main").append(internationalizeButton);
-
-function inName(oldName) {
-    var finalName = oldName;
-    var names = oldName.split(" ");
-    names[1] = names[1].toUpperCase();
-    names[0] = names[0].slice(0, 1).toUpperCase() + names[0].slice(1).toLowerCase();
-    finalName = names.join(" ");
-    return finalName;
-}
-inName("sebastian thrun");
-
-function displayFooterContact() {
-    $("#footerContacts").append(formatedMobile);
-    $("#footerContacts").append(formatedEmail);
-    $("#footerContacts").append(formatedTwitter);
-    $("#footerContacts").append(formatedGithub);
-}
-displayFooterContact();

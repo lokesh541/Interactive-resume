@@ -22,8 +22,8 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <title>Resume</title>
 
   <!-- Load the page styles. -->
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
   <link href="css/style.css" rel="stylesheet">
-
   <!--
   jQuery is a common JavaScript library for reading and making changes to the
   Document Object Model (DOM). The DOM is a tree that contains information
@@ -54,16 +54,46 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <meta name="viewport" content="width=device-width">
 </head>
 <body>
-  <div id="main">
+  <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+       <div class="container-fluid">
+           <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                   <span class="sr-only">Toggle navigation</span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+                   <span class="icon-bar"></span>
+               </button>
+           </div>
 
-    <!--
-    Everything from here to the <script> tag below is the skeleton of your
-    website. Your code will add information to each of the sections of the
-    resume below. You can pretty easily figure out what each section will
-    display by looking at the id or at what's written between the <h2> tags.
-    -->
-    <div id="header" class="center-content clear-fix">
-      <ul id="topContacts" class="flex-box"></ul>
+           <!-- Collect the nav links, forms, and other content for toggling -->
+           <div class="collapse navbar-collapse" id="navbar">
+               <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#">home</a>
+                  </li>
+                   <li><a href="#workExperience">work</a>
+                   </li>
+                   <li><a href="#projects">projects</a>
+                   </li>
+                   <li><a href="#education">education</a>
+                   </li>
+                   <li><a href="#lets-connect">contact</a>
+                   </li>
+               </ul>
+           </div>
+           <!-- /.navbar-collapse -->
+       </div>
+       <!-- /.container-fluid -->
+   </nav>
+  <div id="main" class ="container-fluid"  >
+
+        <!--
+        Everything from here to the <script> tag below is the skeleton of your
+        website. Your code will add information to each of the sections of the
+        resume below. You can pretty easily figure out what each section will
+        display by looking at the id or at what's written between the <h2> tags.
+        -->
+  <div id="header" class="center-content clear-fix">
+        <ul id="topContacts" class="flex-box"></ul>
     </div>
     <div style="clear: both;"></div>
     <div id="workExperience" class="gray">
@@ -71,7 +101,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     </div>
     <div id="projects">
       <h2>Projects</h2>
-    </div> 
+    </div>
     <div id="education" class="gray">
       <h2>Education</h2>
     </div>
@@ -79,11 +109,13 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       <h2>Where I've Lived and Worked</h2>
     </div>
     <div id="lets-connect" class="dark-gray">
-      <h2 class="orange center-text">Let's Connect</h2>
+      <h2 class="black   center-text">Let's Connect</h2>
         <ul id="footerContacts" class="flex-box">
       </ul>
     </div>
   </div>
+
+
 
   <!--
   The next line tells the browser where to download the JavaScript file you'll be
