@@ -160,19 +160,37 @@ function initializeMap() {
     var marker = new google.maps.Marker({
       map: map,
       position: placeData.geometry.location,
-      title: name
+      title: placeData.formatted_address
     });
 
     // infoWindows are the little helper windows that open when you click
     // or hover over a pin on a map. They usually contain more information
     // about a location.
+    var contentString  = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">Bengluru</h1>'+
+      '<div id="bodyContent">'+
+      '<p><b>Bangalore</b>, officially known as <b>Bengaluru</b>, is the capital ' +
+      'capital of India\'s southern Karnataka state.'+
+      'The center of India\'s high-tech industry, the city is also known for its green spaces and nightlife. '+
+      ' Near Cubbon Park, Vidhana Soudha is its massive Neo-Dravidian legislative building.'+
+      'Former royal residences include 19th-century Bangalore Palace,'+
+      'modeled after England’s Windsor Castle,' +
+      'and Tipu Sultan’s Summer Palace, an 18th-century teak structure.'+
+      '</p>'
+      '<p>Attribution: Bengaluru, <a href="https://en.wikipedia.org/wiki/Bangalore">https://en.wikipedia.org/wiki/Bangalore</a> '+
+      '</p>'+
+      '</div>'+
+      '</div>';
     var infoWindow = new google.maps.InfoWindow({
-      content: name
+      content: contentString
     });
 
     // hmmmm, I wonder what this is about...
     google.maps.event.addListener(marker, 'click', function() {
       // your code goes here!
+      infoWindow.open(map,marker);
     });
 
     // this is where the pin actually gets added to the map.
