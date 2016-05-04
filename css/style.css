@@ -67,6 +67,7 @@ h5 {
     font-family: "Roboto",sans-serif;
     margin: 0 20px;
 }
+
 .navbar-default .navbar-nav > li > a {
 	color: #000;
 }
@@ -74,6 +75,7 @@ h5 {
 #name{
     text-align: left;
 }
+
 .welcome-message{
  align-self: center;
 }
@@ -157,6 +159,13 @@ a {
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 10px;
+}
+
+.shadow {
+      box-shadow: 0 5px 10px 0 rgba(153,153,153,0.5);
+      margin: 24px 0;
+      border: 1px solid #d4d2d2;
+      border-radius: 5px;
 }
 
 .center-content {
