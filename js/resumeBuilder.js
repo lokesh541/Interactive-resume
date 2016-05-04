@@ -31,9 +31,9 @@ var work = {
 };
 var projects = {
     'projects': [{
-        'title': 'virtual classroom',
-        'dates': '2014',
-        'description': 'e-learning application',
+        'title': 'Build a Portfolio',
+        'dates': '2016',
+        'description': 'Developed a personal portfolio page using HTML, CSS, and the Bootstrap framework. The page is fully responsive and works on mobile, tablet, and desktop browsers.',
         'images': ['images/197x148.gif'],
     }],
 
@@ -85,11 +85,23 @@ bio.display = function() {
     $header.prepend(formatedName);
 
     var formatedMobile = HTMLmobile.replace(data, bio.contacts.mobile);
+<<<<<<< 650ec88b566e6e25626fc08f6cd563774ae1c5c6
     var formatedEmail = HTMLemail.replace(data, bio.contacts.email);
     var formatedTwitter = HTMLtwitter.replace(data, bio.contacts.twitter);
     var formatedGithub = HTMLgithub.replace(data, bio.contacts.github);
     var formatedLocation = HTMLlocation.replace(data, bio.contacts.location);
     $contacts.append(formatedMobile, formatedEmail, formatedTwitter, formatedGithub, formatedLocation);
+=======
+    $contacts.append(formatedMobile);
+    var formatedEmail = HTMLemail.replace(data, bio.contacts.email);
+    $contacts.append(formatedEmail);
+    var formatedTwitter = HTMLtwitter.replace(data, bio.contacts.twitter);
+    $contacts.append(formatedTwitter);
+    var formatedGithub = HTMLgithub.replace(data, bio.contacts.github);
+    $contacts.append(formatedGithub);
+    var formatedLocation = HTMLlocation.replace(data, bio.contacts.location);
+    $contacts.append(formatedLocation);
+>>>>>>> projects section content changed
 
 
 
