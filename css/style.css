@@ -61,18 +61,24 @@ h5 {
 }
 
 .navbar-default .navbar-collapse, .navbar-default {
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: rgb(255,255,255);
     border:0;
     text-transform: uppercase;
     font-family: "Roboto",sans-serif;
-    margin: 0 20px;
+   
 }
 
 .navbar-default .navbar-nav > li > a {
 	color: #000;
 }
 
+#main{
+  padding: 70px 0;
+
+}
+
 #name{
+
     text-align: left;
 }
 
