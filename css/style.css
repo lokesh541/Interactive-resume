@@ -62,9 +62,9 @@ h5 {
 
 .navbar-default .navbar-collapse, .navbar-default {
     background-color: rgb(255,255,255);
-    border:0;
     text-transform: uppercase;
     font-family: "Roboto",sans-serif;
+    border: 
    
 }
 
@@ -72,8 +72,14 @@ h5 {
 	color: #000;
 }
 
+.navbar-brand {
+   font-weight: 600;
+   font-size: 32px;
+
+}
+
 #main{
-  padding: 40px 0;
+  padding: 30px 0;
 
 }
 
