@@ -13,7 +13,7 @@ an interactive resume application that reads your resume content from a JSON fil
 
 MIT License
 
-Copyright (c) [year] [fullname]
+Copyright (c) [2016] [Lokesh]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
