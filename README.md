@@ -10,7 +10,7 @@ an interactive resume application that reads your resume content from a JSON fil
 
 
          
-         ``  var bio = {
+         `  var bio = {
    		 'name': 'Your-name',
    		 'role': 'Your-job',
     		 'welcomeMessage': 'welcome aboard',
@@ -29,7 +29,7 @@ an interactive resume application that reads your resume content from a JSON fil
    			 ],
    		 'biopic': 'images/fry.jpg',
 		}; 
-``
+`
 
 
 **Useful Links**
