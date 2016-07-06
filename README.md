@@ -28,8 +28,9 @@ an interactive resume application that reads your resume content from a JSON fil
         		'Awesomeness'
    			 ],
    		 'biopic': 'images/fry.jpg',
-		}; 
-            ```
+		};
+``` 
+            
 
 
 **Useful Links**
