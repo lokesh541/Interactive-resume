@@ -9,6 +9,28 @@ an interactive resume application that reads your resume content from a JSON fil
  To make this your own all you have to do is change the values of the Json objects in the ``resumeBuilder.js`` file in ``js/`` folder
 
 
+             ``
+           var bio = {
+   		 'name': 'Your-name',
+   		 'role': 'Your-job',
+    		 'welcomeMessage': 'welcome aboard',
+    		 'contacts': {
+        	 'mobile':'your-number',
+        	 'email': 'your-email',
+        	 'github': 'your-github-user-name',
+        	 'twitter': 'twitter-handle',
+                 'location': 'your-location'
+   		 },
+    		'skills': [
+        		'Html',
+        		'Javascript',
+        		'css',
+        		'Awesomeness'
+   			 ],
+   		 'biopic': 'images/fry.jpg',
+		}; ``
+
+
 **Useful Links**
 
 * [Udacity javascript course](https://classroom.udacity.com/courses/ud804/lessons/1946788554/concepts/25505685350923)
