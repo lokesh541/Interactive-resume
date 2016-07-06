@@ -1,7 +1,8 @@
 **INTERACTIVE RESUME**
 
 an interactive resume application that reads your resume content from a JSON file and dynamically displays that content within a provided template. You will use objects, functions, conditionals, and control structures to compose the content that will display on the resume.
-
+**How to make this your own**
+ To make this your own all you have to do is change the values of the Json objects in the ``resumeBuilder.js`` file in ``js/`` folder
 **Useful Links**
 
 * [Udacity javascript course](https://classroom.udacity.com/courses/ud804/lessons/1946788554/concepts/25505685350923)
