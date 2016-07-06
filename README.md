@@ -6,8 +6,7 @@ an interactive resume application that reads your resume content from a JSON fil
 **How to make this your own**
 
 
- To make this your own all you have to do is change the values of the Json objects in the ``resumeBuilder.js`` file in ``js/`` folder
-
+ To make this your own all you have to do is change the values of the Json objects in the `resumeBuilder.js` file in `js/` folder
 
          
            ```var bio = {
@@ -21,6 +20,7 @@ an interactive resume application that reads your resume content from a JSON fil
         	 'twitter': 'twitter-handle',
                  'location': 'your-location'
    		 },
+
     		'skills': [
         		'Html',
         		'Javascript',
@@ -28,8 +28,7 @@ an interactive resume application that reads your resume content from a JSON fil
         		'Awesomeness'
    			 ],
    		 'biopic': 'images/fry.jpg',
-		};
-``` 
+		};```
             
 
 
