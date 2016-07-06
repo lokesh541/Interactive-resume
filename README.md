@@ -9,8 +9,8 @@ an interactive resume application that reads your resume content from a JSON fil
  To make this your own all you have to do is change the values of the Json objects in the ``resumeBuilder.js`` file in ``js/`` folder
 
 
-             ``
-           var bio = {
+         
+         ``  var bio = {
    		 'name': 'Your-name',
    		 'role': 'Your-job',
     		 'welcomeMessage': 'welcome aboard',
@@ -28,7 +28,8 @@ an interactive resume application that reads your resume content from a JSON fil
         		'Awesomeness'
    			 ],
    		 'biopic': 'images/fry.jpg',
-		}; ``
+		}; 
+``
 
 
 **Useful Links**
