@@ -4,7 +4,7 @@ var bio = {
     'role': 'frontend developer',
     'welcomeMessage': 'welcome aboard',
     'contacts': {
-        'mobile': '9441146585',
+        'mobile': '944xxxxxxxxx',
         'email': 'lrbeeram@gmail.com',
         'github': 'lokesh541',
         'twitter': '@lokeshbeeram',
