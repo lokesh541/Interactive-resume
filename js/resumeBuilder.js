@@ -1,14 +1,14 @@
 'use strict';
 var bio = {
-    'name': 'Lokeswara Reddy',
+    'name': 'xxxxxxxx',
     'role': 'frontend developer',
     'welcomeMessage': 'welcome aboard',
     'contacts': {
-        'mobile': '944xxxxxxxxx',
-        'email': 'lrbeeram@gmail.com',
-        'github': 'lokesh541',
-        'twitter': '@lokeshbeeram',
-        'location': 'Hyderabad'
+        'mobile': 'xxxxxxxxxxxxxx',
+        'email': 'xxxxxxxxxxx',
+        'github': 'xxxxxxx',
+        'twitter': '@xxxxx',
+        'location': 'xxxxx'
     },
     'skills': [
         'Html',
